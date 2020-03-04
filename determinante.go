@@ -35,6 +35,7 @@ func potenciaCubo(num float64) {
 	fmt.Println(num, "elevado a 3 es:", math.Pow(num, 3))
 }
 
+
 func main() {
     determinante2x2(4,2,2,2)
     absolute(-59854)
