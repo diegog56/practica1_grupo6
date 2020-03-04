@@ -19,6 +19,15 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
     }
 }
 
+func absolute(number int) {
+  if (number < 0) {
+    fmt.Println("El valor absoluto es: " + strconv.Itoa(-number))
+  } else {
+    fmt.Println("El valor absoluto es: " + strconv.Itoa(number))
+  }
+}
+
 func main() {
     determinante2x2(4,2,2,2)
+    absolute(-59854)
 }
