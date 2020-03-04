@@ -4,6 +4,7 @@ package main
 
 import ("fmt"
 "strconv"
+"math"
 )
 
 
@@ -19,12 +20,10 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
     }
 }
 
-func absolute(number int) {
-  if (number < 0) {
-    fmt.Println("El valor absoluto es: " + strconv.Itoa(-number))
-  } else {
-    fmt.Println("El valor absoluto es: " + strconv.Itoa(number))
-  }
+func absolute(number float64) {
+  number = math.Abs(number)
+  fmt.Print("El valor absoluto del numero es: ")
+  fmt.Println(number)
 }
 
 func raizCubica(num float64) {
@@ -43,8 +42,6 @@ func div(dividend int,divider int) string{
   if divider==0 { return "Indefinido" }
 	return strconv.Itoa(dividend/divider)
 }
-
-
 
 func main() {
     determinante2x2(4,2,2,2)
