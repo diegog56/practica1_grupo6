@@ -9,7 +9,7 @@ import ("fmt"
 
 func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coordenada11 int){
     determinante:= 0
-    determinante:= coordenada00 * coordenada11 - coordenada10 * coordenada11;
+    determinante = coordenada00 * coordenada11 - coordenada10 * coordenada11
     if determinante == 0{
         fmt.Println(strconv.Itoa(determinante)+ "Soluciones Reales y diferentes")
     }else if determinante > 0{
@@ -39,9 +39,12 @@ func mult(factor1 int,factor2 int) int{
 	return factor1*factor2
 }
 
-func div(dividend int,divider int) int{
-	return dividend/divider
+func div(dividend int,divider int) string{
+  if divider==0 { return "Indefinido" }
+	return strconv.Itoa(dividend/divider)
 }
+
+
 
 func main() {
     determinante2x2(4,2,2,2)
@@ -49,5 +52,5 @@ func main() {
     potenciaCubo(4)
     raizCubica(64)
     fmt.Println(mult(4,2))
-    fmt.Println(div(4,3))
+    fmt.Println(div(4,0))
 }
