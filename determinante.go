@@ -4,6 +4,7 @@ package main
 
 import ("fmt"
 "strconv"
+"math"
 )
 
 
@@ -20,7 +21,7 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
 }
 
 func absolute(number int) {
-  if (number < 0) {
+  if number < 0 {
     fmt.Println("El valor absoluto es: " + strconv.Itoa(-number))
   } else {
     fmt.Println("El valor absoluto es: " + strconv.Itoa(number))
@@ -44,13 +45,55 @@ func div(dividend int,divider int) string{
 	return strconv.Itoa(dividend/divider)
 }
 
-
+func menu(){
+  fmt.Println("Bienvenido al programa")
+  fmt.Println("A continuacion ingrese una opcion:")
+  fmt.Println("1. Calculo de determinante---------")
+  fmt.Println("2. Absoluto de un numero-----------")
+  fmt.Println("3. Cubo de un numero---------------")
+  fmt.Println("4. Raiz cubica de un numero--------")
+  fmt.Println("5. Multiplicacion de dos numeros---")
+  fmt.Println("6. Division de entre numeros-------")
+  fmt.Println("7. Salir del programa--------------")
+}
 
 func main() {
-    determinante2x2(4,2,2,2)
-    absolute(-59854)
-    potenciaCubo(4)
-    raizCubica(64)
-    fmt.Println(mult(4,2))
-    fmt.Println(div(4,0))
+    opcion := ""
+    for {
+      menu();
+      fmt.Scan(&opcion)
+      switch opcion {
+      case "1":
+        fmt.Println("Ingrese la coordenada 00")
+        fmt.Println("Ingrese la coordenada 01")
+        fmt.Println("Ingrese la coordenada 10")
+        fmt.Println("Ingrese la coordenada 11")
+      case "2":
+        fmt.Println("Ingrese el numero")
+      case "3":
+        fmt.Println("Ingrese el numero")
+      case "4":
+        fmt.Println("Ingrese el numero")
+      case "5":
+        fmt.Println("Ingrese el primer factor")
+        var f1 int
+        fmt.Scan(&f1)
+        fmt.Println("Ingrese el segundo factor")
+        var f2 int
+        fmt.Scan(&f2)
+        fmt.Print("El producto es: ")
+        fmt.Println(mult(f1,f2))
+      case "6":
+        fmt.Println("Ingrese el dividendo")
+        var dividend int
+        fmt.Scan(&dividend)
+        fmt.Println("Ingrese el divisor")
+        var divider int
+        fmt.Scan(&divider)
+        fmt.Print("El cociente es: ")
+        fmt.Println(div(dividend,divider))
+      default:
+        fmt.Println("Opcion incorrecta")
+      }
+    }
 }
