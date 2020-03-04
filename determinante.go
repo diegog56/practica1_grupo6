@@ -22,7 +22,7 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
 func determinante3x2(coordenada000 int , coordenada010 int ,coordenada001 int 
   ,coordenada100 int, coordenada110 int, coordenada111 int ){
   determinante:= 0
-  determinante = coordenada000 * coordenada010 * coordenada001 - coordenada100 * coordenada110 * coordenada11
+  determinante = coordenada000 * coordenada010 * coordenada001 - coordenada100 * coordenada110 * coordenada111
   if determinante == 0{
       fmt.Println(strconv.Itoa(determinante)+ "Soluciones Reales y diferentes")
   }else if determinante > 0{
