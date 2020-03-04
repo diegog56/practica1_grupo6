@@ -92,8 +92,11 @@ func main() {
         fmt.Scan(&divider)
         fmt.Print("El cociente es: ")
         fmt.Println(div(dividend,divider))
+      case "7":
+        fmt.Println("Saliendo del programa")
       default:
         fmt.Println("Opcion incorrecta")
       }
+      if opcion=="7" { break }
     }
 }
