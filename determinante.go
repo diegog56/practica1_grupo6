@@ -19,6 +19,16 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
     }
 }
 
+func raizCubica(num float64) {
+	fmt.Println("La raiz cubica de", num, "es", math.Cbrt(num))
+}
+
+func potenciaCubo(num float64) {
+	fmt.Println(num, "elevado a 3 es:", math.Pow(num, 3))
+}
+
 func main() {
     determinante2x2(4,2,2,2)
+    potenciaCubo(4)
+	raizCubica(64)
 }
