@@ -19,8 +19,8 @@ func determinante2x2(coordenada00 int , coordenada01 int ,coordenada10 int ,coor
         fmt.Println(strconv.Itoa(determinante)+ "Soluciones imaginaria")
     }
 }
-func determinante3x2(coordenada000 int , coordenada010 int ,coordenada001 int 
-  ,coordenada100 int, coordenada110 int, coordenada111 int ){
+
+func determinante3x2(coordenada000 int , coordenada010 int ,coordenada001 int, coordenada100 int, coordenada110 int, coordenada111 int ){
   determinante:= 0
   determinante = coordenada000 * coordenada010 * coordenada001 - coordenada100 * coordenada110 * coordenada111
   if determinante == 0{
@@ -32,12 +32,9 @@ func determinante3x2(coordenada000 int , coordenada010 int ,coordenada001 int
   }
 }
 
-func absolute(number int) {
-  if number < 0 {
-    fmt.Println("El valor absoluto es: " + strconv.Itoa(-number))
-  } else {
-    fmt.Println("El valor absoluto es: " + strconv.Itoa(number))
-  }
+func absolute(number float64) {
+  number = math.Abs(number);
+  fmt.Println("El valor absoluto del numero es: ", number)
 }
 
 func raizCubica(num float64) {
@@ -81,7 +78,10 @@ func main() {
         fmt.Println("Ingrese la coordenada 10")
         fmt.Println("Ingrese la coordenada 11")
       case "2":
+        var number float64
         fmt.Println("Ingrese el numero")
+        fmt.Scan(&number)
+        absolute(number)
       case "3":
         fmt.Println("Ingrese el numero")
       case "4":
