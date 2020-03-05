@@ -65,6 +65,12 @@ func div(dividend int,divider int) string{
 	return strconv.Itoa(dividend/divider)
 }
 
+func decimalABinario(dec int){
+  val := int64(dec)
+
+  fmt.Printf("El número %d en binario es '%s'\n", dec, strconv.FormatInt(val, 2))
+}
+
 func menu(){
   fmt.Println("Bienvenido al programa")
   fmt.Println("A continuacion ingrese una opcion:")
@@ -76,6 +82,7 @@ func menu(){
   fmt.Println("6. Division de entre numeros-------")
   fmt.Println("7. Salir del programa--------------")
   fmt.Println("8. Numero Random")
+  fmt.Println("9. decimal a binario--------------")
 }
 
 func main() {
@@ -126,6 +133,11 @@ func main() {
         var max int
         fmt.Scan(&max)
         randomize(min, max)
+      case "9":
+        fmt.Println("Ingrese un numero: ")
+        var num_ int
+        fmt.Scan(&num_)
+        decimalABinario(num_)
       default:
         fmt.Println("Opcion incorrecta")
       }
