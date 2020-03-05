@@ -46,7 +46,10 @@ func randomize(min int, max int) {
 }
 
 func raizCubica(num float64) {
-	fmt.Println("La raiz cubica de", num, "es", math.Cbrt(num))
+  val := math.Cbrt(num)
+  s := fmt.Sprintf("%.2f", val)
+
+	fmt.Println("La raiz cubica de", num, "es", s)
 }
 
 func potenciaCubo(num float64) {
