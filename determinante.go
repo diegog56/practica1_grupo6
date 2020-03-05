@@ -5,6 +5,8 @@ package main
 import ("fmt"
 "strconv"
 "math"
+"math/rand"
+"time"
 )
 
 
@@ -37,6 +39,12 @@ func absolute(number float64) {
   fmt.Println("El valor absoluto del numero es: ", number)
 }
 
+func randomize(min int, max int) {
+  rand.Seed(time.Now().UnixNano())
+  fmt.Print("El numero random es: ")
+  fmt.Println(rand.Intn(max - min + 1) + min)
+}
+
 func raizCubica(num float64) {
 	fmt.Println("La raiz cubica de", num, "es", math.Cbrt(num))
 }
@@ -64,6 +72,7 @@ func menu(){
   fmt.Println("5. Multiplicacion de dos numeros---")
   fmt.Println("6. Division de entre numeros-------")
   fmt.Println("7. Salir del programa--------------")
+  fmt.Println("8. Numero Random")
 }
 
 func main() {
@@ -106,6 +115,14 @@ func main() {
         fmt.Println(div(dividend,divider))
       case "7":
         fmt.Println("Saliendo del programa")
+      case "8":
+        fmt.Println("Ingrese el minimo")
+        var min int
+        fmt.Scan(&min)
+        fmt.Println("Ingrese el maximo")
+        var max int
+        fmt.Scan(&max)
+        randomize(min, max)
       default:
         fmt.Println("Opcion incorrecta")
       }
