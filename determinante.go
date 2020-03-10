@@ -86,6 +86,7 @@ func menu(){
 }
 
 func main() {
+    fmt.Println("Antes de empezar este es un cambio, el bugfix 6.2")
     opcion := ""
     for {
       menu();
