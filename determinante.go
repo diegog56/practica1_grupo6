@@ -147,4 +147,77 @@ func main() {
 			break
 		}
 	}
+func menu(){
+  fmt.Println("Bienvenido al programa")
+  fmt.Println("A continuacion ingrese una opcion:")
+  fmt.Println("1. Calculo de determinante---------")
+  fmt.Println("2. Absoluto de un numero-----------")
+  fmt.Println("3. Cubo de un numero---------------")
+  fmt.Println("4. Raiz cubica de un numero--------")
+  fmt.Println("5. Multiplicacion de dos numeros---")
+  fmt.Println("6. Division de entre numeros-------")
+  fmt.Println("7. Salir del programa--------------")
+  fmt.Println("8. Numero Random")
+  fmt.Println("9. decimal a binario--------------")
+  fmt.Println("Bienvenido crack cienazo o k??")
+}
+
+func main() {
+  fmt.Println(" >>>> Bienvenido Usuario <<<<")
+    opcion := ""
+    op := ""
+    fmt.Println("Calificacion Practica 1")
+    for {
+      menu();
+      fmt.Scan(&op)
+      switch op {
+      case "1":
+        fmt.Println("Ingrese las coordenadas")
+      case "2":
+        var number float64
+        fmt.Println("Ingrese el num1")
+        fmt.Scan(&number)
+        absolute(number)
+      case "3":
+        fmt.Println("Ingrese el num")
+      case "4":
+        fmt.Println("Ingrese el numer")
+      case "5":
+        fmt.Println("Ingrese el primer factor de la multiplicacion")
+        var f1 int
+        fmt.Scan(&f1)
+        fmt.Println("Ingrese el segundo factor de la multiplicacion")
+        var f2 int
+        fmt.Scan(&f2)
+        fmt.Print("El producto es: ")
+        fmt.Println(mult(f1,f2))
+      case "6":
+        fmt.Println("Ingrese el dividendo")
+        var dividend int
+        fmt.Scan(&dividend)
+        fmt.Println("Ingrese el divisor")
+        var divider int
+        fmt.Scan(&divider)
+        fmt.Print("El cociente es: ")
+        fmt.Println(div(dividend,divider))
+      case "7":
+        fmt.Println("Saliendo del programa")
+      case "8":
+        fmt.Println("Ingrese el minimo")
+        var min int
+        fmt.Scan(&min)
+        fmt.Println("Ingrese el maximo")
+        var max int
+        fmt.Scan(&max)
+        randomize(min, max)
+      case "9":
+        fmt.Println("Ingrese un numero: ")
+        var num_ int
+        fmt.Scan(&num_)
+        decimalABinario(num_)
+      default:
+        fmt.Println("Opcion incorrecta, lea el menu")
+      }
+      if op=="7" { break }
+    }
 }
