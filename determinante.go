@@ -86,6 +86,8 @@ func menu(){
 }
 
 func main() {
+  fmt.Println(" >>>> Bienvenido Usuario <<<<")
+  
     opcion := ""
     for {
       menu();
