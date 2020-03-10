@@ -83,6 +83,7 @@ func menu(){
   fmt.Println("7. Salir del programa--------------")
   fmt.Println("8. Numero Random")
   fmt.Println("9. decimal a binario--------------")
+  fmt.Println("Bienvenido crack cienazo o k??")
 }
 
 func main() {
