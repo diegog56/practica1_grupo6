@@ -89,29 +89,28 @@ func main() {
   fmt.Println(" >>>> Bienvenido Usuario <<<<")
   
     opcion := ""
+    op := ""
+    fmt.Println("Calificacion Practica 1")
     for {
       menu();
-      fmt.Scan(&opcion)
-      switch opcion {
+      fmt.Scan(&op)
+      switch op {
       case "1":
-        fmt.Println("Ingrese la coordenada 00")
-        fmt.Println("Ingrese la coordenada 01")
-        fmt.Println("Ingrese la coordenada 10")
-        fmt.Println("Ingrese la coordenada 11")
+        fmt.Println("Ingrese las coordenadas")
       case "2":
         var number float64
-        fmt.Println("Ingrese el numero")
+        fmt.Println("Ingrese el num1")
         fmt.Scan(&number)
         absolute(number)
       case "3":
-        fmt.Println("Ingrese el numero")
+        fmt.Println("Ingrese el num")
       case "4":
-        fmt.Println("Ingrese el numero")
+        fmt.Println("Ingrese el numer")
       case "5":
-        fmt.Println("Ingrese el primer factor")
+        fmt.Println("Ingrese el primer factor de la multiplicacion")
         var f1 int
         fmt.Scan(&f1)
-        fmt.Println("Ingrese el segundo factor")
+        fmt.Println("Ingrese el segundo factor de la multiplicacion")
         var f2 int
         fmt.Scan(&f2)
         fmt.Print("El producto es: ")
@@ -141,8 +140,8 @@ func main() {
         fmt.Scan(&num_)
         decimalABinario(num_)
       default:
-        fmt.Println("Opcion incorrecta")
+        fmt.Println("Opcion incorrecta, lea el menu")
       }
-      if opcion=="7" { break }
+      if op=="7" { break }
     }
 }
